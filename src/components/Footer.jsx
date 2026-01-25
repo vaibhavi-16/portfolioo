@@ -1,7 +1,12 @@
 export default function Footer() {
   return (
     <footer className="footer">
-      <h2>Contact</h2>
+      <h2>Let’s Connect</h2>
+
+      <p style={{ maxWidth: "720px", margin: "10px auto 26px", opacity: 0.85 }}>
+        I’m open to Sales, Business Development, and Marketing opportunities where I can
+        contribute to revenue growth, client acquisition, and brand building.
+      </p>
 
       <p>
         📧 Email:{" "}
@@ -22,6 +27,10 @@ export default function Footer() {
           linkedin.com/in/aman-a885621b7
         </a>
       </p>
+
+      <div style={{ marginTop: "26px", color: "var(--accent)", fontWeight: 600 }}>
+        Let’s explore how I can add value to your organization.
+      </div>
 
       <p className="footer-note">
         © {new Date().getFullYear()} Aman

@@ -6,14 +6,34 @@
   --text: #f2f5f6;
   --soft-text: #d7dde0;
   --accent: #ff4d6d;
-
-  --card-bg: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.08),
-    rgba(255, 255, 255, 0.02)
-  );
-
+  --card-bg: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
   --border: rgba(255, 77, 109, 0.15);
+}
+
+/* ========= GRADIENT PRESETS ========= */
+
+body.theme-redblue {
+  --bg: radial-gradient(circle at top left, #8a0f1f 0%, #081b3a 40%, #02030a 80%);
+}
+
+body.theme-blue {
+  --bg: radial-gradient(circle at top right, #0f2a55 0%, #020617 70%);
+}
+
+body.theme-purple {
+  --bg: radial-gradient(circle at top, #4c1d95 0%, #1e0938 40%, #050008 80%);
+}
+
+body.theme-black {
+  --bg: radial-gradient(circle at top, #1a1a1a 0%, #000000 80%);
+}
+
+body.theme-green {
+  --bg: radial-gradient(circle at top left, #064e3b 0%, #020617 75%);
+}
+
+body.theme-cyber {
+  --bg: radial-gradient(circle at top left, #ff005c 0%, #3b82f6 40%, #02030a 80%);
 }
 
 /* LIGHT MODE */
