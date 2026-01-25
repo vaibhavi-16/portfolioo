@@ -10,9 +10,10 @@ export default function Education() {
       <h2>Education</h2>
 
       <div className="education-item">
-        <h3>Bachelor’s Degree / Diploma</h3>
-        <p>Computer Science / Related Field</p>
-        <span>2021 – 2025</span>
+        <h3>Bachelor of Technology (B.Tech)</h3>
+        <p>Computer Science & Engineering</p>
+        <span>2024 – 2028</span>
+
       </div>
     </section>
   );
