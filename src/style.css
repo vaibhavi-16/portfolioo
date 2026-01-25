@@ -1,162 +1,238 @@
-/* RESET */
+/* ===============================
+   THEME VARIABLES
+================================ */
+:root {
+  --bg: radial-gradient(circle at top, #2a0008, #050607 65%);
+  --text: #f2f5f6;
+  --soft-text: #d7dde0;
+  --accent: #ff4d6d;
+
+  --card-bg: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  --border: rgba(255, 77, 109, 0.15);
+}
+
+/* LIGHT MODE */
+body.light {
+  --bg: radial-gradient(circle at top, #ffffff, #e9edc9 70%);
+  --text: #1f2d33;
+  --soft-text: #3f4f55;
+  --accent: #c44536;
+
+  --card-bg: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(245, 245, 245, 0.65)
+  );
+
+  --border: rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   RESET
+================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
 }
 
-/* BODY */
+/* ===============================
+   BODY
+================================ */
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #ffffff;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background 0.6s ease, color 0.4s ease;
 }
 
-/* HERO */
+/* ===============================
+   HERO
+================================ */
 .hero {
+  min-height: 100vh;
   text-align: center;
-  padding: 80px 20px;
+  padding: 120px 20px 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  letter-spacing: 3px;
+  color: var(--text);
+  animation: fadeUp 0.9s ease both;
 }
 
 .hero h2 {
-  margin-top: 10px;
-  color: #00e5ff;
-  transform-style: preserve-3d;
-  transition: transform 0.15s ease-out;
-
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  margin-top: 14px;
+  color: var(--accent);
+  font-weight: 600;
+  text-shadow: 0 0 18px rgba(255, 77, 109, 0.45);
+  animation: fadeUp 1.2s ease both;
 }
-
 
 .hero p {
-  margin-top: 15px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0.8;
-  
-  
+  margin-top: 20px;
+  max-width: 780px;
+  opacity: 0.9;
+  line-height: 1.7;
+  font-size: 1.08rem;
+  color: var(--soft-text);
+  animation: fadeUp 1.6s ease both;
 }
 
-/* CONTAINER (VERY IMPORTANT FOR 3D) */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 60px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-
-  /* 3D MAGIC */
+/* ===============================
+   PROFILE IMAGE
+================================ */
+.profile-wrapper {
+  width: 290px;
+  height: 290px;
+  margin: 0 auto 40px;
+  border-radius: 50%;
+  position: relative;
   perspective: 1200px;
 }
 
-/* CARD */
-.card {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 30px;
-  border-radius: 16px;
-
-  transform-style: preserve-3d;
-  transition: transform 0.15s ease-out;
-
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+.profile-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -22px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff2a4f, #00f5ff, transparent 70%);
+  filter: blur(35px);
+  opacity: 0.85;
+  z-index: -1;
 }
 
-/* SKILLS */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.8);
+  animation: float 6s ease-in-out infinite;
+}
+
+.profile-wrapper:hover .profile-img {
+  transform: scale(1.12) rotateY(12deg) rotateX(6deg);
+  box-shadow: 0 45px 130px rgba(255, 77, 109, 0.55);
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.container {
+  width: 90%;
+  max-width: 1450px;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px;
+  perspective: 1500px;
+}
+
+/* ===============================
+   CARD
+================================ */
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  padding: 38px;
+  border-radius: 26px;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.35s ease;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--border);
+}
+
+.card:hover {
+  box-shadow: 0 55px 140px rgba(255, 77, 109, 0.35);
+}
+
+.card h2 {
+  transform: translateZ(30px);
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  transform: translateZ(18px);
+  margin-top: 10px;
+  line-height: 1.7;
+  opacity: 0.9;
+  color: var(--soft-text);
+}
+
+/* ===============================
+   SKILLS
+================================ */
 .skill-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 15px;
+  gap: 14px;
+  margin-top: 18px;
 }
 
 .skill-list li {
   list-style: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: rgba(0, 229, 255, 0.2);
-  animation: float 3s ease-in-out infinite;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #ff4d6d33, #00f5ff22);
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  font-size: 0.92rem;
+  color: var(--text);
+  border: 1px solid var(--border);
 }
 
-/* PROJECT CARDS */
-.project-card {
-  margin-top: 12px;
-  padding: 14px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.12);
-  animation: float 3s ease-in-out infinite;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-  transform: translateZ(20px);
-}
-
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 30px;
-  opacity: 0.7;
-}
-
-.skill-list li:nth-child(odd) {
-  animation-duration: 4s;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0) translateZ(20px);
-  }
-  50% {
-    transform: translateY(-8px) translateZ(35px);
-  }
-  100% {
-    transform: translateY(0) translateZ(20px);
-  }
-}
-.card h2 {
-  transform: translateZ(30px);
-}
-
-.card p {
-  transform: translateZ(20px);
-}
-
-.project-card {
-  transform: translateZ(25px);
-}
-.education-card {
-  grid-column: span 2; /* full width like Projects */
-}
-
+/* ===============================
+   PROJECTS / EDUCATION
+================================ */
+.project-card,
 .education-item {
-  margin-top: 15px;
-  padding: 15px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.12);
-  animation: float 3s ease-in-out infinite;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffffff12, #ff4d6d0f);
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.65);
+  transform: translateZ(22px);
+  border: 1px solid var(--border);
 }
 
-.education-item span {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
+/* ===============================
+   FOOTER
+================================ */
 .footer {
-  margin-top: 80px;
-  padding: 40px 20px;
+  margin-top: 140px;
+  padding: 70px 20px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to top, #120003, transparent);
+  border-top: 1px solid var(--border);
+}
+
+.footer h2 {
+  color: var(--accent);
+  margin-bottom: 12px;
 }
 
 .footer a {
-  color: #00e5ff;
-  margin-left: 5px;
+  color: #00f5ff;
+  margin-left: 6px;
   text-decoration: none;
 }
 
@@ -165,47 +241,200 @@ body {
 }
 
 .footer-note {
-  margin-top: 20px;
+  margin-top: 24px;
   font-size: 0.85rem;
   opacity: 0.6;
 }
-@media (max-width: 768px) {
+
+/* ===============================
+   GRID FIX
+================================ */
+.education-card {
+  grid-column: span 2;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
   .container {
     grid-template-columns: 1fr;
   }
 
-  .projects-card,
   .education-card {
     grid-column: span 1;
   }
-}
-/* PROFILE IMAGE WRAPPER */
-.profile-wrapper {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto 25px;
 
-  border-radius: 50%;
-  perspective: 800px;
-}
+  .profile-wrapper {
+    width: 190px;
+    height: 190px;
+  }
 
-/* PROFILE IMAGE */
-.profile-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-
-  transition: all 0.4s ease;
-  transform-style: preserve-3d;
-
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-  animation: float 3s ease-in-out infinite;
+  .hero {
+    padding: 90px 20px 70px;
+  }
 }
 
-/* HOVER EFFECT */
-.profile-wrapper:hover .profile-img {
-  transform: scale(1.12) rotateY(10deg) translateZ(20px);
-  box-shadow: 0 25px 50px rgba(155, 191, 195, 0.6);
-  animation: float 3s ease-in-out infinite;
+/* ===============================
+   ANIMATIONS
+================================ */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===============================
+   HIGHLIGHTS SECTION
+================================ */
+
+.highlight-list {
+  margin-top: 14px;
+  padding-left: 18px;
+  line-height: 1.8;
+  color: var(--soft-text);
+}
+
+.highlight-list li {
+  margin-bottom: 10px;
+  transform: translateZ(18px);
+}
+
+/* RESUME DOWNLOAD BOX */
+
+.resume-box {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.resume-box p {
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #ff4d6d, #ff9f1c);
+  box-shadow: 0 0 25px rgba(255, 77, 109, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.resume-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 45px rgba(255, 77, 109, 0.9);
+}
+/* ===============================
+   EXPERIENCE SECTION
+================================ */
+
+.experience-block {
+  margin-top: 18px;
+}
+
+.experience-block h3 {
+  color: var(--text);
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.experience-block span {
+  display: block;
+  font-size: 0.82rem;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.experience-block ul {
+  padding-left: 18px;
+  line-height: 1.65;
+  color: var(--soft-text);
+}
+
+.experience-block li {
+  margin-bottom: 8px;
+}
+
+/* ===============================
+   RESUME DOWNLOAD
+================================ */
+
+.resume-box {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #ff4d6d, #ff9f1c);
+  box-shadow: 0 0 25px rgba(255, 77, 109, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.resume-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 45px rgba(255, 77, 109, 0.9);
+}
+/* ===============================
+   TOP RIGHT BUTTONS
+================================ */
+
+.theme-btn {
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 8px 16px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  font-weight: 500;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.6);
+}
+
+.top-resume-btn {
+  text-decoration: none;
+  padding: 9px 18px;
+  border-radius: 22px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: white;
+  background: linear-gradient(135deg, #ff4d6d, #ff9f1c);
+  box-shadow: 0 0 22px rgba(255, 77, 109, 0.55);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.top-resume-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 45px rgba(255, 77, 109, 0.9);
 }

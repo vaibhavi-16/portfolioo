@@ -6,16 +6,17 @@ export default function Skills() {
   useTilt(ref);
 
   return (
-    <section className="card" ref={ref}>
+    <section className="card animate-right animate-delay-2 jiggle" ref={ref}>
       <h2>Skills</h2>
       <ul className="skill-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React JS</li>
         <li>Python</li>
-        <li>Java</li>
-        <li>API Calling</li>
+        <li>Django, FastAPI, Flask</li>
+        <li>REST APIs & Microservices</li>
+        <li>SQL (MySQL, PostgreSQL)</li>
+        <li>Redis, Celery, Async Systems</li>
+        <li>Vue.js, JavaScript, HTML, CSS</li>
+        <li>Azure, Docker, Kubernetes, CI/CD</li>
+        <li>System Design & Performance</li>
       </ul>
     </section>
   );

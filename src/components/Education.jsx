@@ -6,14 +6,10 @@ export default function Education() {
   useTilt(ref);
 
   return (
-    <section className="card education-card" ref={ref}>
+  <section className="card education-card animate-right animate-delay-4 jiggle" ref={ref}>
       <h2>Education</h2>
-
       <div className="education-item">
-        <h3>Bachelor of Technology (B.Tech)</h3>
-        <p>Computer Science & Engineering</p>
-        <span>2024 – 2028</span>
-
+        B.Tech in Computer Science – BPUT University (2018–2022)
       </div>
     </section>
   );

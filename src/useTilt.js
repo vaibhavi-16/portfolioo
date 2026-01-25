@@ -5,7 +5,12 @@ export default function useTilt(ref) {
     const card = ref.current;
     if (!card) return;
 
+    card.style.transition = "transform 0.12s ease-out";
+
     const move = (e) => {
+      card.classList.remove("jiggle");       // stop idle float
+      card.classList.add("hover-jiggle");    // start hover jiggle
+
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
@@ -19,15 +24,18 @@ export default function useTilt(ref) {
       card.style.transform = `
         rotateX(${-rotateX}deg)
         rotateY(${rotateY}deg)
-        translateZ(30px)
+        scale(1.04)
       `;
     };
 
     const reset = () => {
+      card.classList.remove("hover-jiggle"); // stop hover jiggle
+      card.classList.add("jiggle");          // resume idle float
+
       card.style.transform = `
         rotateX(0deg)
         rotateY(0deg)
-        translateZ(0px)
+        scale(1)
       `;
     };
 
