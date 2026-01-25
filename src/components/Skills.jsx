@@ -8,15 +8,20 @@ export default function Skills() {
   return (
     <section className="card animate-right animate-delay-2 jiggle" ref={ref}>
       <h2>Skills</h2>
+
       <ul className="skill-list">
-        <li>Python</li>
-        <li>Django, FastAPI, Flask</li>
-        <li>REST APIs & Microservices</li>
-        <li>SQL (MySQL, PostgreSQL)</li>
-        <li>Redis, Celery, Async Systems</li>
-        <li>Vue.js, JavaScript, HTML, CSS</li>
-        <li>Azure, Docker, Kubernetes, CI/CD</li>
-        <li>System Design & Performance</li>
+        <li>Lead Generation & Cold Calling</li>
+        <li>Customer Acquisition</li>
+        <li>Sales Funnel Management</li>
+        <li>Client Relationship Management</li>
+        <li>Email & WhatsApp Marketing</li>
+        <li>CRM Tools & Lead Tracking</li>
+        <li>Google Analytics (GA4)</li>
+        <li>Google Tag Manager</li>
+        <li>MS Excel (Pivot Tables, Lookups)</li>
+        <li>Market Research & Reporting</li>
+        <li>Cross-functional Coordination</li>
+        <li>Professional Communication</li>
       </ul>
     </section>
   );

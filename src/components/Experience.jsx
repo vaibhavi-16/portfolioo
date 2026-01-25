@@ -6,68 +6,41 @@ export default function Experience() {
   useTilt(ref);
 
   return (
-    <section
-      ref={ref}
-      className="card animate-right animate-delay-3 jiggle"
-    >
-      <h2>Work Experience</h2>
+    <section ref={ref} className="card animate-right animate-delay-3 jiggle">
+      <h2>Internship Experience</h2>
 
       <div className="experience-block">
-        <h3>Senior Application Developer – Landmark Group (Data Labs)</h3>
-        <span>Nov 2024 – Present | Bangalore, India</span>
-
+        <h3>Trainee – Rajdhani Homes Pvt. Ltd., Ranchi</h3>
+        <span>Real Estate Sales & Marketing</span>
         <ul>
-          <li>
-            Leading architecture, design, and development of enterprise-grade
-            platforms supporting multiple business units.
-          </li>
-          <li>
-            Spearheaded development of PriceScope, a retail pricing intelligence
-            platform enabling competitor monitoring, dynamic pricing, and
-            real-time analytics.
-          </li>
-          <li>
-            Achieved 80% system performance improvement using FastAPI async
-            services, Redis caching, Celery pipelines, and SQL optimization.
-          </li>
-          <li>
-            Designed microservice-based systems, standardized REST APIs, and
-            managed Azure CI/CD pipelines for cloud-native deployments.
-          </li>
-          <li>
-            Took end-to-end ownership of business-critical products and mentored
-            junior engineers.
-          </li>
+          <li>Generated and qualified real estate leads through cold calling, referrals, and site visits.</li>
+          <li>Supported end-to-end sales pipeline including follow-ups, client engagement, and documentation.</li>
+          <li>Assisted in property exhibitions and marketing activities to increase inquiries.</li>
+          <li>Conducted 12+ site visits and supported deal movement in the conversion funnel.</li>
+          <li>Analysed client requirements and recommended suitable property solutions.</li>
         </ul>
       </div>
 
       <div className="experience-block">
-        <h3>Software Engineer – A Plus Topper</h3>
-        <span>Jan 2022 – Nov 2024</span>
-
+        <h3>Trainee – Royal Orchid Hotels, Bangalore</h3>
         <ul>
-          <li>
-            Core contributor to an algorithmic trading platform supporting
-            thousands of active users.
-          </li>
-          <li>
-            Built and scaled backend services using Python, Django, MySQL, Redis,
-            and Celery-based background processing.
-          </li>
-          <li>
-            Developed real-time data pipelines and financial analytics systems.
-          </li>
-          <li>
-            Delivered multiple client-facing tools enabling data-driven trading
-            and investment decisions.
-          </li>
+          <li>Supported front-office and service teams to deliver high-quality customer experiences.</li>
+          <li>Handled guest coordination and issue resolution.</li>
+          <li>Assisted service operations in a premium hospitality environment.</li>
+        </ul>
+      </div>
+
+      <div className="experience-block">
+        <h3>Trainee – Radisson Blu Hotel, Ranchi</h3>
+        <ul>
+          <li>Assisted daily operations and service quality improvement initiatives.</li>
+          <li>Managed customer interactions and service coordination.</li>
         </ul>
       </div>
 
       <div className="resume-box">
-        <p>Want a detailed view of my experience?</p>
-
-        <a href="/Vaibhavi_Resume.pdf" download className="resume-btn">
+        <p>Download my detailed resume</p>
+        <a href="/Aman_Resume.pdf" download className="resume-btn">
           ⬇ Download Resume
         </a>
       </div>

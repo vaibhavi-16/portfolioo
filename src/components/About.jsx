@@ -8,19 +8,21 @@ export default function About() {
   return (
     <section className="card animate-left animate-delay-1 jiggle" ref={ref}>
       <h2>About Me</h2>
+
       <p>
-        I am a Full Stack Developer with 4+ years of experience designing,
-        building, and scaling enterprise and data-driven web platforms.
-        My core expertise lies in Python, Django, FastAPI, and cloud-native
-        systems.
+        I am an MBA candidate specialising in Sales and Marketing, with practical
+        exposure to real estate and premium hospitality environments. I bring
+        hands-on experience in lead generation, cold outreach, client
+        engagement, and supporting early-stage sales pipelines.
       </p>
 
       <p>
-        I have worked extensively on microservices architecture, system
-        design, performance optimization, and large-scale distributed
-        systems in retail and fintech domains. I enjoy owning products
-        end-to-end and transforming complex business requirements into
-        reliable technical solutions.
+        I am skilled at understanding market needs, building strong customer
+        relationships, and supporting revenue-driven initiatives through
+        structured follow-ups, site visits, and consultative selling. I am
+        actively seeking entry-level opportunities in Sales, Business
+        Development, or Marketing where I can contribute to scalable growth and
+        brand success.
       </p>
     </section>
   );

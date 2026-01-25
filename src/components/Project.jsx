@@ -7,34 +7,13 @@ export default function Project() {
 
   return (
     <section className="card animate-left animate-delay-3 jiggle" ref={ref}>
-      <h2>Key Projects</h2>
+      <h2>Certifications</h2>
 
-      <div className="project-card">
-        <h3>Central Pricing Application</h3>
-        <p>
-          Enterprise pricing intelligence platform for retail operations.
-          Built scalable FastAPI services, secure REST APIs, distributed
-          caching, and real-time analytics dashboards.
-        </p>
-      </div>
-
-      <div className="project-card">
-        <h3>PriceScope Platform</h3>
-        <p>
-          Retail competitor monitoring and dynamic pricing system.
-          Improved system performance by 80% using async services,
-          Redis caching, and optimized SQL queries.
-        </p>
-      </div>
-
-      <div className="project-card">
-        <h3>Margin Estimation Tool</h3>
-        <p>
-          Financial forecasting system enabling leadership teams to make
-          data-driven pricing and revenue decisions. Reduced manual
-          analysis time by 40%.
-        </p>
-      </div>
+      <div className="project-card">Business Marketing – Technology Focus (NPTEL)</div>
+      <div className="project-card">Foundations of Digital Marketing & E-commerce – Google</div>
+      <div className="project-card">Excel Skills Certification – JP Morgan (Forage)</div>
+      <div className="project-card">Digital Marketing Strategy – Simplilearn</div>
+      <div className="project-card">Investment Risk Management – Coursera</div>
     </section>
   );
 }

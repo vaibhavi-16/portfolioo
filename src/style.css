@@ -2,7 +2,7 @@
    THEME VARIABLES
 ================================ */
 :root {
-  --bg: radial-gradient(circle at top, #2a0008, #050607 65%);
+  --bg: radial-gradient(circle at top left, #8a0f1f 0%, #081b3a 40%, #02030a 80%);
   --text: #f2f5f6;
   --soft-text: #d7dde0;
   --accent: #ff4d6d;
@@ -109,7 +109,7 @@ body {
   position: absolute;
   inset: -22px;
   border-radius: 50%;
-  background: radial-gradient(circle, #ff2a4f, #00f5ff, transparent 70%);
+  background: radial-gradient(circle, #ff2a2a, #1e3a8a, transparent 70%);
   filter: blur(35px);
   opacity: 0.85;
   z-index: -1;

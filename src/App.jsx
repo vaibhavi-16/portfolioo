@@ -32,7 +32,7 @@ export default function App() {
       >
         {/* DOWNLOAD RESUME */}
         <a
-          href="/Vaibhavi_Resume.pdf"
+          href="/Aman_Resume.pdf"
           download
           className="top-resume-btn"
         >

@@ -4,38 +4,27 @@ export default function Footer() {
       <h2>Contact</h2>
 
       <p>
-        📧 Email:
-        <a href="mailto:tandon16vaibhavi@gmail.com">
-          tandon16vaibhavi@gmail.com
-        </a>
+        📧 Email:{" "}
+        <a href="mailto:amanrahi7599@gmail.com">amanrahi7599@gmail.com</a>
       </p>
 
-      <p>📞 Phone: +91 6205451214</p>
+      <p>📞 Phone: +91 84340 06247</p>
+
+      <p>📍 Location: Bengaluru, India</p>
 
       <p>
-        💻 GitHub:
+        🔗 LinkedIn:{" "}
         <a
-          href="https://github.com/vaibhavi-16"
+          href="https://www.linkedin.com/in/aman-a885621b7/"
           target="_blank"
           rel="noreferrer"
         >
-          github.com/vaibhavi-16
-        </a>
-      </p>
-
-      <p>
-        🔗 LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/vaibhavi-kumari-8a64741b6/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          linkedin.com/in/vaibhavi-kumari
+          linkedin.com/in/aman-a885621b7
         </a>
       </p>
 
       <p className="footer-note">
-        © {new Date().getFullYear()} Vaibhavi Kumari
+        © {new Date().getFullYear()} Aman
       </p>
     </footer>
   );
